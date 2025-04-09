@@ -7,6 +7,7 @@ from facenet_pytorch import MTCNN
 from PIL import Image
 from tensorflow.keras.models import load_model
 import os
+import time
 
 from ..config import *
 
@@ -50,6 +51,7 @@ class FaceEmotionRecognition:
 
             response = []
 
+            t1 = time.time()
             for box, prod in zip(boxes, probs):
                 if prod < 0.9:
                     continue
@@ -78,6 +80,9 @@ class FaceEmotionRecognition:
                     }
                 )
 
+            # logger.info(f"Time performance for each face: {time.time() - t1:.2f} seconds")
+            print(f"Time performance for each face: {time.time() - t1:.2f} seconds")
+                
             return "Succeed to detect emotion", response
 
         except Exception as e:

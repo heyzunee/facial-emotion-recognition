@@ -3,7 +3,7 @@ import cv2
 from ..config import *
 from ..module.detector import FaceEmotionRecognition
 
-img_path = "datasets/test/3.jpg"
+img_path = "src/datasets/test/10.jpg"
 
 detector = FaceEmotionRecognition()
 message, results = detector.detect_emotions(img_path=img_path)

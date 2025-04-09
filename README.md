@@ -32,7 +32,7 @@ A Python-based API for facial emotion recognition from images containing one or 
     - Test set: 5,384 images
   - Used data augmentation (rotation, zoom, shift, ...) to enhance generalization.
 - **Performance**:
-  - Inference Time: ~45ms per face on CPU.
+  - Inference Time: ~0.2s per face on CPU.
   - Best validation accuracy: **85.71%** (epoch 18)
   - Final test accuracy: **65.94%**
 
