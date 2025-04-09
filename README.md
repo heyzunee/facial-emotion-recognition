@@ -19,18 +19,28 @@ A Python-based API for facial emotion recognition from images containing one or 
 ## Model Information
 
 ### Face Detection
-- **Model used**: `Haar Cascade Classifier` from OpenCV.
-- This lightweight model efficiently detects multiple faces in an image.
+- **Model used**: [MTCNN](https://github.com/timesler/facenet-pytorch) (Multi-task Cascaded Convolutional Networks) via `facenet-pytorch`.
+- MTCNN is a deep learning-based face detector known for its high accuracy and robustness in multi-face scenarios.
 
 ### Face Emotion Recognition
 - **Base model**: `VGG19` pretrained on ImageNet.
 - **Fine-tuning strategy**:
-  - Replaced the final classifier layers of VGG19 with emotion-specific fully connected layers.
   - Fine-tuned on the **FER2013** dataset (Facial Expression Recognition 2013).
-  - Used data augmentation (rotation, zoom, shift) to enhance generalization.
+  - Used data augmentation (rotation, zoom, shift, ...) to enhance generalization.
 - **Performance**:
-  - Validation Accuracy: **~72.3%**
   - Inference Time: ~45ms per face on CPU.
+  - Best validation accuracy: **85.71%** (epoch 18)
+  - Final test accuracy: **65.94%**
+
+| Emotion Label | Precision | Recall | F1-score | Support |
+|---------------|-----------|--------|----------|---------|
+| 0 (Angry)     | 0.56      | 0.61   | 0.58     | 743     |
+| 1 (Disgust)   | 0.58      | 0.30   | 0.40     | 82      |
+| 2 (Fear)      | 0.50      | 0.43   | 0.46     | 768     |
+| 3 (Happy)     | 0.87      | 0.87   | 0.87     | 1349    |
+| 4 (Sad)       | 0.57      | 0.51   | 0.54     | 912     |
+| 5 (Surprise)  | 0.73      | 0.79   | 0.76     | 600     |
+| 6 (Neutral)   | 0.60      | 0.68   | 0.63     | 930     |
 
 Fine-tuning and training notebook can be found at: `src/model/Fine_tuning_VGG_19_for_FER.ipynb`
 
@@ -43,22 +53,17 @@ Fine-tuning and training notebook can be found at: `src/model/Fine_tuning_VGG_19
 - Download the pretrained model from this link: [Pretrained Model](https://drive.google.com/file/d/1r70CDOi8aIQCAI9DmS-YlgDEBdFR4Iua/view?usp=drive_link)
 - Place the downloaded model file inside the `src/model` directory.
 
----
-
 ### Step 2: Build Docker Image
 
 ```bash
 docker build -t detect_emotions:v1 .
 ```
----
 
 ### Step 3: Run Docker Container
 ```bash
 docker run -it -p 9000:9000 detect_emotions:v1
 ```
 The API will be available at: http://localhost:9000/emotion
-
----
 
 ### Step 4: Test API with curl
 ```bash
