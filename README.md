@@ -4,7 +4,7 @@ A Python-based API for facial emotion recognition from images containing one or 
 
 ---
 
-## 📌 API Features
+## API Features
 
 - **Endpoint**: `POST /emotion`
 - **Request Input**: A single image file (`.jpg` or `.png`) submitted as `multipart/form-data`.
@@ -16,26 +16,24 @@ A Python-based API for facial emotion recognition from images containing one or 
 
 ---
 
-## 🧠 Model Information
+## Model Information
 
 - The model is fine-tuned based on **VGG19** architecture.
-- Fine-tuning and training notebook can be found at:  
-  `src/model/Fine_tuning_VGG_19_for_FER.ipynb`
+- Fine-tuning and training notebook can be found at: `src/model/Fine_tuning_VGG_19_for_FER.ipynb`
 - The model demonstrates high performance on emotion classification tasks.
 
 ---
 
-## ⚙️ Installation & Running the API
+## Installation & Running the API
 
-### 📥 Step 1: Download Pretrained Model
+### Step 1: Download Pretrained Model
 
-- Download the pretrained model from this link:  
-  👉 [Download model](https://drive.google.com/file/d/1r70CDOi8aIQCAI9DmS-YlgDEBdFR4Iua/view?usp=drive_link)
+- Download the pretrained model from this link: 👉 [Download model](https://drive.google.com/file/d/1r70CDOi8aIQCAI9DmS-YlgDEBdFR4Iua/view?usp=drive_link)
 - Place the downloaded model file inside the `src/model` directory.
 
 ---
 
-### 🐳 Step 2: Build Docker Image
+### Step 2: Build Docker Image
 
 ```bash
 docker build -t detect_emotions:v1 .
