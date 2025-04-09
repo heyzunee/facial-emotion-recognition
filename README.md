@@ -54,7 +54,7 @@ Fine-tuning and training notebook can be found at: `src/model/Fine_tuning_VGG_19
 
 ### Step 1: Download Pretrained Model
 
-- Download the pretrained model from this link: [Pretrained Model](https://drive.google.com/file/d/1r70CDOi8aIQCAI9DmS-YlgDEBdFR4Iua/view?usp=drive_link)
+- Download the pretrained model from this link: [best_model.keras](https://drive.google.com/file/d/1r70CDOi8aIQCAI9DmS-YlgDEBdFR4Iua/view?usp=drive_link)
 - Place the downloaded model file inside the `src/model` directory.
 
 ### Step 2: Build Docker Image
