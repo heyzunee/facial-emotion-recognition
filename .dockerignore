@@ -1,0 +1,7 @@
+docker-compose.yml
+.git
+.env
+__pycache__/
+*.pyc
+.idea
+src/tests

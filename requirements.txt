@@ -1,0 +1,9 @@
+tensorflow>=2.0.0
+keras>=2.0.0
+opencv-python>=4.5.0
+pillow>=8.0.0
+fastapi==0.115.12
+environs==14.1.1
+python-multipart==0.0.20
+uvicorn==0.34.0
+facenet-pytorch==2.6.0
