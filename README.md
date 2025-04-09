@@ -27,12 +27,12 @@ A Python-based API for facial emotion recognition from images containing one or 
 - **Fine-tuning strategy**:
   - Fine-tuned on the **FER2013** dataset (Facial Expression Recognition 2013).
   - Dataset split:
-    - Training set: 24,402 images
-    - Validation set: 6,101 images
-    - Test set: 5,384 images
+    - Training set: **24,402** images
+    - Validation set: **6,101** images
+    - Test set: **5,384** images
   - Used data augmentation (rotation, zoom, shift, ...) to enhance generalization.
 - **Performance**:
-  - Inference Time: ~0.2s per face on CPU.
+  - Inference Time: **~0.2s** per face on CPU.
   - Best validation accuracy: **85.71%** (epoch 18)
   - Final test accuracy: **65.94%**
 
