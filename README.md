@@ -26,6 +26,10 @@ A Python-based API for facial emotion recognition from images containing one or 
 - **Base model**: `VGG19` pretrained on ImageNet.
 - **Fine-tuning strategy**:
   - Fine-tuned on the **FER2013** dataset (Facial Expression Recognition 2013).
+  - Dataset split:
+    - Training set: 24,402 images
+    - Validation set: 6,101 images
+    - Test set: 5,384 images
   - Used data augmentation (rotation, zoom, shift, ...) to enhance generalization.
 - **Performance**:
   - Inference Time: ~45ms per face on CPU.
