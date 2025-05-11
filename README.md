@@ -1,4 +1,4 @@
-  # 🎭 Face Emotion Recognition API
+  # Facial Emotion Recognition API
 
 A Python-based API for facial emotion recognition from images containing one or multiple human faces.
 
