@@ -1,8 +1,7 @@
-  # Facial Emotion Recognition API
+# Facial Emotion Recognition API
 
 A Python-based API for facial emotion recognition from images containing one or multiple human faces.
 
----
 
 ## API Features
 
@@ -14,7 +13,6 @@ A Python-based API for facial emotion recognition from images containing one or 
     - `"happy"`, `"sad"`, `"angry"`, `"fear"`, `"surprise"`, `"neutral"`
   - `confidence`: score from `0` to `1` representing model certainty
 
----
 
 ## Model Information
 
@@ -48,7 +46,6 @@ A Python-based API for facial emotion recognition from images containing one or 
 
 Fine-tuning and training notebook can be found at: `src/model/Fine_tuning_VGG_19_for_FER.ipynb`
 
----
 
 ## Installation & Running the API
 
